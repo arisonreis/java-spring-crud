@@ -1,0 +1,12 @@
+services:
+  java_crud:
+    container_name: 'java_crud_app'
+    image: postgres:15
+    environment:
+      POSTGRES_USER: arisonreis
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: java-crud
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
